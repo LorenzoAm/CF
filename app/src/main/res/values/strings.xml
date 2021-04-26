@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">CodiceFiscale</string>
+    <string name="name">Name</string>
+    <string name="enter_your_data">Enter your data :</string>
+    <string name="surname">Surname</string>
+    <string name="date_of_birth">Date of birth(dd/mm/yyyy)</string>
+    <string name="gender">Gender :</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="birthplace">Birthplace</string>
+    <string name="calculate">Calculate</string>
+    <string name="error1">Name field is empty !</string>
+    <string name="error2">Surname field is empty !</string>
+    <string name="error3">Date field is empty !</string>
+    <string name="error4">Gender field is empty !</string>
+    <string name="error5">Birthplace field is empty !</string>
+</resources>
