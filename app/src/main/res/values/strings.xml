@@ -9,9 +9,9 @@
     <string name="female">Female</string>
     <string name="birthplace">Birthplace</string>
     <string name="calculate">Calculate</string>
-    <string name="error1">Name field is empty !</string>
-    <string name="error2">Surname field is empty !</string>
-    <string name="error3">Date field is empty !</string>
-    <string name="error4">Gender field is empty !</string>
-    <string name="error5">Birthplace field is empty !</string>
+    <string name="error1"> You must fill in all the fields !</string>
+    <string name="error2"> Name field is incorrect !</string>
+    <string name="error3"> Surname field is incorrect !</string>
+    <string name="error4"> Entered date format is incorrect !</string>
+    <string name="error5"> Birthplace field is incorrect !</string>
 </resources>

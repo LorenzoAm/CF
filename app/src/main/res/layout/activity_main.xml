@@ -8,7 +8,7 @@
 
     <EditText
         android:id="@+id/name"
-        android:layout_width="221dp"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         android:ems="10"
@@ -23,7 +23,7 @@
         android:id="@+id/header"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="40dp"
         android:text="@string/enter_your_data"
         android:textColor="#000000"
         android:textSize="20sp"
@@ -33,7 +33,7 @@
 
     <EditText
         android:id="@+id/surname"
-        android:layout_width="221dp"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:ems="10"
@@ -46,7 +46,7 @@
 
     <EditText
         android:id="@+id/date"
-        android:layout_width="221dp"
+        android:layout_width="250dp"
         android:layout_height="42dp"
         android:layout_marginTop="20dp"
         android:ems="10"
@@ -61,8 +61,8 @@
         android:id="@+id/genderText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginStart="95dp"
+        android:layout_marginTop="32dp"
         android:text="@string/gender"
         android:textColor="#000000"
         android:textSize="18sp"
@@ -94,7 +94,7 @@
 
     <AutoCompleteTextView
         android:id="@+id/birthplace"
-        android:layout_width="221dp"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:ems="10"
@@ -107,7 +107,7 @@
         android:id="@+id/calculate"
         android:layout_width="291dp"
         android:layout_height="57dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="40dp"
         android:text="@string/calculate"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -117,7 +117,7 @@
         android:id="@+id/cf"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="30dp"
         android:textColor="#000000"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
