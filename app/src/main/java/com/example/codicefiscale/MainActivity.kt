@@ -23,12 +23,12 @@ class MainActivity : AppCompatActivity() {
                 binding.cf.setText(R.string.error1)
             }
                     //controllo sintassi nome
-            else if((binding.name.text.toString().contains("0"))||(binding.name.text.toString().contains("1"))||(binding.name.text.toString().contains("2"))||(binding.name.text.toString().contains("3"))||(binding.name.text.toString().contains("4"))||(binding.name.text.toString().contains("5"))||(binding.name.text.toString().contains("6"))||(binding.name.text.toString().contains("7"))||(binding.name.text.toString().contains("8"))||(binding.name.text.toString().contains("9")))
+            else if(!check(binding.name.text.toString()))
             {
                 binding.cf.setText(R.string.error2)
             }
                     //controllo sintassi cognome
-            else if((binding.surname.text.toString().contains("0"))||(binding.surname.text.toString().contains("1"))||(binding.surname.text.toString().contains("2"))||(binding.surname.text.toString().contains("3"))||(binding.surname.text.toString().contains("4"))||(binding.surname.text.toString().contains("5"))||(binding.surname.text.toString().contains("6"))||(binding.surname.text.toString().contains("7"))||(binding.surname.text.toString().contains("8"))||(binding.surname.text.toString().contains("9")))
+            else if(!check(binding.surname.text.toString()))
             {
                 binding.cf.setText(R.string.error3)
             }
@@ -38,7 +38,7 @@ class MainActivity : AppCompatActivity() {
                 binding.cf.setText(R.string.error4)
             }
                     //controllo sintassi birthplace
-            else if((binding.birthplace.text.toString().contains("0"))||(binding.birthplace.text.toString().contains("1"))||(binding.birthplace.text.toString().contains("2"))||(binding.birthplace.text.toString().contains("3"))||(binding.birthplace.text.toString().contains("4"))||(binding.birthplace.text.toString().contains("5"))||(binding.birthplace.text.toString().contains("6"))||(binding.birthplace.text.toString().contains("7"))||(binding.birthplace.text.toString().contains("8"))||(binding.birthplace.text.toString().contains("9")))
+            else if(!check(binding.birthplace.text.toString()))
             {
                 binding.cf.setText(R.string.error5)
             }
@@ -65,6 +65,21 @@ class MainActivity : AppCompatActivity() {
 
             }
         }
+    }
+
+    private fun check(x : String) : Boolean
+    {
+        var out = true
+        var cont = 0
+        while(cont<x.length)
+        {
+            when(x[cont].toString())
+            {
+                "0","1","2","3","4","5","6","7","8","9" -> out = false
+            }
+            cont++
+        }
+        return out
     }
 
     private fun control(input: String): String
@@ -314,35 +329,7 @@ class MainActivity : AppCompatActivity() {
 
         }
     }
-/*
-    private fun checkName(name : String) :String
-    {
-        var out = ""
-        var cont = 0
-        while(cont < name.length)
-        {
-            if(name[cont].toString() != " ")
-                out += name[cont]
-            cont++
-        }
-        return out
-    }
 
-    private fun checkSurname(surname : String) :String
-    {
-        var out = ""
-        var cont = 0
-        while(cont < surname.length)
-        {
-            if((surname[cont].toString() != " ")&&(surname[cont].toString() != "'"))
-                out += surname[cont]
-            cont++
-        }
-        return out
-    }
-
-
- */
 
 
 
