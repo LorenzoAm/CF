@@ -3,6 +3,8 @@ package com.example.codicefiscale
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.codicefiscale.databinding.ActivityMainBinding
+import java.io.*
+import java.nio.charset.Charset
 import java.util.*
 import java.util.regex.Pattern
 
@@ -16,6 +18,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.calculate.setOnClickListener{
+
+
 
             //controllo campi vuoti
             if((binding.name.text.toString()=="")||(binding.surname.text.toString()=="")||(binding.date.text.toString()=="")||(binding.gender.checkedRadioButtonId == -1)||(binding.birthplace.text.toString()==""))
@@ -41,6 +45,11 @@ class MainActivity : AppCompatActivity() {
             else if(!check(binding.birthplace.text.toString()))
             {
                 binding.cf.setText(R.string.error5)
+            }
+            else if(calculateMunicipality(binding.birthplace.text.toString().toUpperCase(Locale.ROOT))=="")
+            {
+
+                binding.cf.setText(R.string.error6)
             }
             else
             {
@@ -189,18 +198,6 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    private fun calculateMunicipality(municipality: String): String
-    {
-        return when(municipality)
-        {
-            "ROMA" -> "H501"
-            "BOLOGNA" -> "A944"
-            "L'AQUILA" -> "A345"
-            "MILANO" -> "F205"
-            "FIRENZE" -> "D612"
-            else -> ""
-        }
-    }
 
     private fun calculateDay(gender: String, day: String): String
     {
@@ -328,6 +325,24 @@ class MainActivity : AppCompatActivity() {
              else -> ""
 
         }
+    }
+
+    private fun calculateMunicipality(x : String) : String
+    {
+        var out = ""
+        var temp : List<String>
+        val reader = assets.open("countrycode.csv").bufferedReader()
+        reader.useLines { lines ->
+            lines.forEach {
+                temp = it.split(";")
+                if (temp[0].toUpperCase(Locale.ROOT) == x) {
+                    out = temp[2]
+                }
+            }
+        }
+
+        
+        return out
     }
 
 
